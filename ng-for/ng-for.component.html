@@ -1,0 +1,51 @@
+<div class="container mt-5">
+  <div class="row">
+    <h3>All Product Information is displayed</h3>
+    <p class="lead">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quibusdam
+      ea error perferendis voluptate. Id maiores, at qui, quos deleniti quod ad
+      tempore velit sunt adipisci ut consectetur, suscipit eaque? Hic officiis
+      deserunt quibusdam provident quas ipsam, nesciunt, cum modi dolorum saepe
+      perspiciatis natus, dignissimos quae! Deserunt repellat animi labore.
+    </p>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <button
+        *ngIf="!showButton"
+        class="btn btn-outline-primary"
+        (click)="changeStatus()"
+      >
+        Show Row
+      </button>
+      <button
+        *ngIf="showButton"
+        class="btn btn-outline-danger mx-3"
+        (click)="changeStatusAgain()"
+      >
+        Hide Row
+      </button>
+    </div>
+  </div>
+  <div class="row mt-5" *ngIf="showRow">
+    <table class="table">
+      <thead class="bg-dark text-white">
+        <tr>
+          <th>BRAND NAME</th>
+          <th>MODEL NAME</th>
+          <th>PRICE</th>
+          <th>RATING</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let product of Products">
+          <td>{{ product.brand }}</td>
+          <td>{{ product.model }}</td>
+          <td>{{ product.price }}</td>
+          <td>{{ product.rating }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

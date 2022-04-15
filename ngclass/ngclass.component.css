@@ -1,0 +1,16 @@
+.valid {
+    border: 2px solid green;
+    /* background-color: green;
+    color: white; */
+}
+
+.invalid {
+    border: 2px solid red;
+    /* background-color: red;
+    color: white; */
+}
+
+.darkMode {
+    background-color: black;
+    color: white;
+}

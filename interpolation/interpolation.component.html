@@ -1,0 +1,65 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-8">
+      <div class="card">
+        <div class="card-header bg-dark text-white">
+          <h3>Interpolation and Property Binding Concept</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-4">
+              <img [src]="student.surl" class="img-fluid" />
+            </div>
+            <div class="col-8">
+              <dl>
+                <dt>NAME</dt>
+                <dd>{{ student.sname }}</dd>
+                <dt>CITY</dt>
+                <dd>{{ student.scity }}</dd>
+                <dt>EMAIL</dt>
+                <dd>{{ student.semail }}</dd>
+              </dl>
+              <button
+                class="btn btn-outline-primary"
+                (click)="changeDataToSneha()"
+              >
+                Sneha Reddy
+              </button>
+              <button
+                class="btn btn-outline-danger mx-2"
+                (click)="changeDataToRahul()"
+              >
+                Rahul sharma
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col-6">
+      <div class="card mb-5">
+        <div class="card-header bg-primary text-white">
+          <h3>Event Binding</h3>
+        </div>
+        <div class="card-body">
+          <dl>
+            <dd>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter Text"
+                (keydown)="sendData($event)"
+              />
+            </dd>
+          </dl>
+        </div>
+        <div class="card-footer">
+          <p>{{ inputData }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

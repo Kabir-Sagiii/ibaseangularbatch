@@ -1,0 +1,36 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-4">
+      <dl>
+        <dt>NAME</dt>
+        <dd>
+          <input type="text" class="form-control" [(ngModel)]="inputData" />
+        </dd>
+        <dt>City</dt>
+        <dd>
+          <input type="text" class="form-control" [(ngModel)]="cityData" />
+        </dd>
+        <dt>Email</dt>
+        <dd>
+          <input type="text" class="form-control" [(ngModel)]="emailData" />
+        </dd>
+      </dl>
+    </div>
+    <div class="col-4">
+      <dl>
+        <dt>NAME</dt>
+        <dd>
+          <p>{{ inputData }}</p>
+        </dd>
+        <dt>CITY</dt>
+        <dd>
+          <p>{{ cityData }}</p>
+        </dd>
+        <dt>EMAIL</dt>
+        <dd>
+          <p>{{ emailData }}</p>
+        </dd>
+      </dl>
+    </div>
+  </div>
+</div>

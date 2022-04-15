@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card-header bg-warning text-white">
+    <h2>Child Comp</h2>
+  </div>
+  <div class="card-body">
+    <input type="text" class="form-control" #inputRef />
+    <button class="btn btn-warning mt-2" (click)="sendDataToParent(inputRef)">
+      Send to Parent
+    </button>
+  </div>
+  <div class="card-footer">
+    <p class="lead">{{ dataCameFromParent }}</p>
+  </div>
+</div>

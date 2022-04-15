@@ -1,0 +1,42 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-6">
+      <div class="card">
+        <div class="card-header bg-dark text-white">
+          <h3>ngIF Directive</h3>
+        </div>
+
+        <div class="card-body">
+          <dl>
+            <dt>Product Name</dt>
+            <dd>{{ product.name }}</dd>
+            <dt>Product Price</dt>
+            <dd>{{ product.price | currency }}</dd>
+            <dt>
+              <div class="form-check form-switch">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  #switchRef
+                  (change)="changeData(switchRef)"
+                />
+                <label class="form-check-label">Show Preview</label>
+              </div>
+              <!-- <div>
+                <input
+                  type="checkbox"
+                  (change)="switchChanged($event)"
+                  #switchRef
+                />
+              </div> -->
+            </dt>
+            <!-- <dd>{{ switchRef.value }}</dd> -->
+            <dd *ngIf="showImage">
+              <img [src]="product.image" width="200" height="200" />
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

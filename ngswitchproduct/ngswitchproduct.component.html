@@ -1,0 +1,68 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col">
+      <h2>Ng Switch Product</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima ipsam
+        sunt fugit, error eligendi tempora alias impedit accusamus, veritatis
+        hic nisi. Sint culpa, aliquid reiciendis cum asperiores deserunt nulla
+        autem dolorem eaque. Explicabo magnam totam fuga corporis iusto vero
+        alias, temporibus placeat tempora. Nisi saepe quos sequi aliquam,
+        voluptas aperiam beatae nobis eveniet accusamus consectetur placeat
+        soluta labore laboriosam molestias eaque quam quod, delectus fugiat,
+        nesciunt ab magni. At, tempora?
+      </p>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col">
+      <div class="btn-toolbar">
+        <div class="btn-group">
+          <button class="btn btn-primary" (click)="changeType('basicDetails')">
+            Basic Product Info
+          </button>
+          <button class="btn btn-danger" (click)="changeType('Description')">
+            Description and Price
+          </button>
+          <button class="btn btn-success" (click)="changeType('rating')">
+            Product Rating
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col">
+      <div [ngSwitch]="type">
+        <div *ngSwitchCase="'basicDetails'">
+          <dl>
+            <dt>Product Name</dt>
+            <dd>{{ productDetails.title }}</dd>
+            <dt>Product Image</dt>
+            <dd>
+              <img [src]="productDetails.image" height="200" width="200" />
+            </dd>
+          </dl>
+        </div>
+        <div *ngSwitchCase="'Description'">
+          <dl>
+            <dt>Price</dt>
+            <dd>{{ productDetails.price | currency: "Rs." }}</dd>
+            <dt>Description</dt>
+            <dd>{{ productDetails.description }}</dd>
+          </dl>
+        </div>
+        <div *ngSwitchCase="'rating'">
+          <dl>
+            <dt>Category</dt>
+            <dd>{{ productDetails.category }}</dd>
+            <dt>Rating</dt>
+            <dd>{{ productDetails.rating.rate }}</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

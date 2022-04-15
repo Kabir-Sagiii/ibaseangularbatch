@@ -1,0 +1,25 @@
+<div class="container mt-5">
+  <div class="row">
+    <h2>Parent Component</h2>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <div class="card">
+        <div class="card-header d-flex">
+          <input type="text" class="form-control" #input />
+          <button class="btn btn-primary mx-2" (click)="getData(input)">
+            submit
+          </button>
+          <button class="btn btn-warning" (click)="changeStatus()">
+            Remove child
+          </button>
+        </div>
+        <div class="card-body">
+          <app-child-lch *ngIf="status" [data]="pdata"
+            >Helloooo !!!{{ pdata }}</app-child-lch
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
